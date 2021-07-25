@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iS launcher</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .modal {
+        font-family: "Exo 2", sans-se;
+        width: 300px;
+      }
+      .modal-header ul {
+        list-style: none;
+        padding-inline-start: 0;
+      }
+      .modal-header ul h3 {
+        padding: 0.2rem;
+        margin: 0;
+      }
+      .modal-header ul h3:hover {
+        background: dimgray;
+        color: white;
+        cursor: pointer;
+      }
+      .modal-footer {
+        font-size: 0.7rem;
+        font-style: italic;
+        color: darkslategray;
+        border-top: dashed 3px black;
+        padding-top: 10px;
+        margin-top: 10px;
+      }
+      code {
+        color: black !important;
+      }
+
+      h3 {
+        font-size: 1.1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="modal">
+      <div class="modal-header">
+        <div id="qrcodeid"></div>
+        <small>Shared id: <span id="conn-id"></span></small>
+        <ul>
+          <li id="urlToQrCode">
+            <h3><i class="bi bi-upc-scan"></i> URL to QRCode</h3>
+          </li>
+          <li>
+            <h3><i class="bi bi-phone"></i> URLs from mobile</h3>
+          </li>
+          <li>
+            <h3 id="sendAllOpenTabs">
+              <i class="bi bi-link-45deg"></i> Send to mobile all open tabs
+            </h3>
+          </li>
+          <li id="clearQrCodeWindow">
+            <h3><i class="bi bi-x-circle"></i> Clear generated QRCode</h3>
+          </li>
+        </ul>
+      </div>
+      <div class="modal-body">
+        <div id="qrcode"></div>
+        <div id="msg">Loading...</div>
+      </div>
+      <div class="modal-footer">
+        <span
+        ><a href="https://github.com/nanorocks/i-share" target="_blank"
+        ><code>@i-share</code></a
+        >
+        is a real time share tool where you can share urls between mobile and
+        pc.</span
+        >
+      </div>
+    </div>
+    <script type="text/javascript" src="./js/qrcode.min.js"></script>
+    <script type="text/javascript" src="./js/peerjs.min.js"></script>
+    <script type="text/javascript" src="./js/script.js"></script>
+  </body>
+  </html>
+  

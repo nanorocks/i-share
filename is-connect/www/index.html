@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta
+      name="viewport"
+      content="initial-scale=1, width=device-width, viewport-fit=cover"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" rel="stylesheet" />
+    <title>iS connect</title>
+  </head>
+  <body>
+    <div id="spinner"></div>
+    <div id="content-block" class="d-none">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <div class="container-fluid">
+          <div class="navbar-brand">
+            <i
+              class="fa fa-mobile p-2"
+              aria-hidden="true"
+              style="font-size: 2rem"
+            ></i>
+            <span class="nav-title-center"> iS connect </span>
+          </div>
+          <button
+            class="navbar-toggler rounded-pill bg-white border"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Connection board</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Mobile URL list</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">PC URL list</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+      <div class="container">
+        <section class="row">
+          <div class="col-12 pt-2">
+            <div class="text-cente">
+              <h2 class="pt-3 pb-0 mb-0 text-center con-board-heading">Connection board</h2>
+              <p class="text-center p-0 m-0 small font-style-italic con-board-sub-heading">
+                scan the qr code for p2p connection
+              </p>
+            </div>
+            <div style="width: 100%" id="reader"></div>
+          </div>
+
+          <form class="d-flex pt-2">
+            <input
+              class="form-control me-2 rounded-0"
+              type="search"
+              placeholder="Connection ID"
+              aria-label="Connection ID"
+              id="pir-conn"
+              disabled
+            />
+            <button class="btn btn-outline-danger rounded-0" type="button" id="disconnect-btn">
+              Disconnect
+            </button>
+          </form>
+        </section>
+
+        <section class="row d-none">
+          <div class="col-12">
+            <div class="pt-4">
+              <div>Mobile URL list</div>
+            </div>
+            <hr />
+            <div class="list-group">
+              <a
+                href="#"
+                class="list-group-item list-group-item-action"
+                aria-current="true"
+                target="_blank"
+              >
+                The current link item
+              </a>
+              List empty...
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <nav
+        class="
+          navbar navbar-expand-lg navbar-dark
+          fixed-bottom
+          p-3
+          small
+          text-light
+          bg-dark
+        "
+        id="appStatus"
+      >
+        Not connected ...
+      </nav>
+    </div>
+    <script type="text/javascript" src="js/html5-qrcode.min.js"></script>
+    <script type="text/javascript" src="js/peerjs.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+  </body>
+</html>
